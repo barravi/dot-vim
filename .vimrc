@@ -131,7 +131,21 @@ set visualbell
 " CUSTOM KEYS
 """"""""""""""""
 " TABBED MODE
-map ,t <ESC>:tabnew<CR>
-map ,<Right> <ESC>:tabn<CR>
-map ,<Left> <ESC>:tabp<CR>
+nmap <leader>t :tabnew<CR>
 
+nmap <leader>ty :tabn<CR>
+nmap <leader>tr :tabp<CR>
+
+nmap <leader>tt <C-w>gf
+" SPLIT MODE
+nmap <leader>e :vsplit<CR>
+nmap <leader>o :split<CR>
+
+nmap <leader>j <C-w><Down>
+nmap <leader>k <C-w><Up>
+nmap <leader>h <C-w><Left>
+nmap <leader>l <C-w><Right>
+nmap <leader>w <C-w>q
+
+" LINE NUMBERS
+nmap <leader>/ :set invnumber<CR>

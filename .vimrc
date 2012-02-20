@@ -149,3 +149,8 @@ nmap <leader>w <C-w>q
 
 " LINE NUMBERS
 nmap <leader>/ :set invnumber<CR>
+
+" COPY/PASTE FROM CLIPBOARD
+"vmap <leader><C-c> "*y
+"nmap <leader><C-v> "*gP
+"vmap <leader><C-x> "*d

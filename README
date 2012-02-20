@@ -1,0 +1,12 @@
+My personal vim configuration.
+
+I'm using vundle to manage the plugins, and trying to not
+add too many of them. I wanna get acquainted with the ones I already have
+before installing others.
+
+I have added some keymaps to handle splits in a way similar to the
+Terminator terminal emulator for linux, and tabs as well.
+
+Hope you'll enjoy.
+
+Vincenzo

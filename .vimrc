@@ -27,6 +27,10 @@ Bundle 'jnwhiteh/vim-golang'
 
 " Solarized: Solarized  color scheme
 Bundle 'altercation/vim-colors-solarized'
+""" SOLARIZED CONFIGURATION
+set background=dark "light
+let g:solarized_termtrans=1
+colorscheme solarized
 
 " Python: advanced syntax highlighting
 Bundle 'python.vim'
@@ -40,13 +44,11 @@ Bundle 'kien/ctrlp.vim'
 " Matchit: extended % matching for HTML, LaTeX, and many other languages 
 Bundle 'matchit.zip'
 
+" Erlvim: Erlang plugin for vim
+Bundle 'oscarh/vimerl'
+
 filetype plugin indent on
 syntax on
-
-""" SOLARIZED CONFIGURATION
-set background=dark "light
-let g:solarized_termtrans=1
-colorscheme solarized
 
 """""""""""""""""""
 " CUSTOM PARAMETERS
@@ -68,8 +70,7 @@ nnoremap ` '
 " let mapleader = ","
 
 " History: Keep a longer history
-" By default, Vim only remembers the last 20 commands
-set history=1000
+" By default, Vim only remembers the last 20 commandsset history=1000
 
 " Completion: By default, pressing <TAB> in command mode will 
 " choose the first possible completion with no indication of how many 
@@ -108,7 +109,7 @@ nnoremap <C-y> 3<C-y>
 " LimitedLineNumbering:
 set ruler
 
-" These shoudl be already there
+" These should be already there
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
 " Highlight search terms...
@@ -127,9 +128,34 @@ set shortmess=atI
 " VisualBell: do not beep
 set visualbell
 
+"""""""""""""""""""
+" CUSTOM FUNCTIONS
+"""""""""""""""""""
+""" FocusMode
+function! ToggleFocusMode()
+  if (&foldcolumn != 12)
+    set laststatus=0
+    set numberwidth=10
+    set foldcolumn=12
+    set noruler
+    hi FoldColumn ctermbg=none
+    hi LineNr ctermfg=0 ctermbg=none
+    hi NonText ctermfg=0
+  else
+    set laststatus=2
+    set numberwidth=4
+    set foldcolumn=0
+    set ruler
+    execute 'colorscheme ' . g:colors_name
+  endif
+endfunc
+
+nnoremap <leader><F1> :call ToggleFocusMode()<cr>
+
 """"""""""""""""
 " CUSTOM KEYS
 """"""""""""""""
+
 " TABBED MODE
 nmap <leader>t :tabnew<CR>
 
@@ -154,3 +180,8 @@ nmap <leader>/ :set invnumber<CR>
 "vmap <leader><C-c> "*y
 "nmap <leader><C-v> "*gP
 "vmap <leader><C-x> "*d
+
+""""""""""""""""""""""""""""""""""
+" CUSTOM CONFIGURATION PARAMETERS
+""""""""""""""""""""""""""""""""""
+set tabstop=2

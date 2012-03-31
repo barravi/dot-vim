@@ -4,6 +4,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Upon repository clone, run this command first to install vundle"
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
@@ -185,3 +187,6 @@ nmap <leader>/ :set invnumber<CR>
 " CUSTOM CONFIGURATION PARAMETERS
 """"""""""""""""""""""""""""""""""
 set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set noexpandtab

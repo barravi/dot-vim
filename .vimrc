@@ -183,6 +183,8 @@ nmap <leader>/ :set invnumber<CR>
 "nmap <leader><C-v> "*gP
 "vmap <leader><C-x> "*d
 
+cmap W w
+cmap Q q
 """"""""""""""""""""""""""""""""""
 " CUSTOM CONFIGURATION PARAMETERS
 """"""""""""""""""""""""""""""""""

@@ -175,8 +175,16 @@ nmap <leader>h <C-w><Left>
 nmap <leader>l <C-w><Right>
 nmap <leader>w <C-w>q
 
+nmap <leader>J <C-w>-
+nmap <leader>K <C-w>+
+nmap <leader>H <C-w><
+nmap <leader>L <C-w>>
+
 " LINE NUMBERS
 nmap <leader>/ :set invnumber<CR>
+
+" CTAGS REMAP
+"nmap <c-[> <C-T>
 
 " COPY/PASTE FROM CLIPBOARD
 "vmap <leader><C-c> "*y
